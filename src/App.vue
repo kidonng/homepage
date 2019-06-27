@@ -2,8 +2,27 @@
 div
   .bg
 
+  .profile
+    img.avatar(
+      :src="avatar"
+      alt="Avatar"
+      title="Bio"
+      @click="hideBio = false"
+    )
+
+    .column
+      h1.name {{ name }}
+      ul.links: li(v-for="link in links" :key="link.title"): a(
+        :href="link.href"
+        :target="link.href.startsWith('http') && '_blank'"
+        :rel="link.href.startsWith('http') && 'noreferrer noopener'"
+      ) {{ link.title }}
+
   .bio(:class="{ hide: hideBio }")
-    h2.title {{ bioTitle }}
+    h2.title
+      | {{ bioTitle }}
+      svg.close(viewBox="0 0 24 24" @click="hideBio = true")
+        path(fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z")
     .text(v-html="bioText")
 
     h2.title Projects
@@ -14,28 +33,13 @@ div
         rel="noreferrer noopener"
       ) {{ project.title }}
       | {{ project.description }}
-
-  .profile
-    img.avatar(
-      src="https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200"
-      alt="Avatar"
-      title="Toggle bio"
-      @click="hideBio = !hideBio"
-    )
-
-    .column
-      h1.name {{ name }}
-      ul.links: li(v-for="link in links" :key="link.title"): a(
-        :href="link.href"
-        :target="link.href.startsWith('http') && '_blank'"
-        :rel="link.href.startsWith('http') && 'noreferrer noopener'"
-      ) {{ link.title }}
 </template>
 
 <script>
 export default {
   data: () => ({
     name: 'kidonng',
+    avatar: 'https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200',
     bioTitle: 'Howdy!',
     bioText: `
       <p>
@@ -59,8 +63,8 @@ export default {
         href: 'https://www.yuque.com/kidonng/blog'
       },
       {
-        title: 'Telegram',
-        href: 'tg://resolve?domain=kidonng'
+        title: 'TG',
+        href: 'https://t.me/kidonng'
       },
       {
         title: 'Email',
@@ -136,7 +140,7 @@ a
 
   @media screen and (max-width breakpoint)
     &
-      background-position-x 40%
+      background-position-x 42%
 
 .bio
   overlay()
@@ -146,12 +150,29 @@ a
   background-color white
   transition opacity .5s
 
+  @media screen and (min-width breakpoint)
+    &
+      padding-right 25vw
+      padding-left 25vw
+
   &.hide
     opacity 0
     pointer-events none
 
 .title
   font-size 1.5rem
+  display flex
+  justify-content space-between
+
+.close
+  width 1.5rem
+  cursor pointer
+
+  path
+    transition fill .25s
+
+  &:hover path
+    fill transparentify(black .5)
 
 .text
   color transparentify(black .75)
@@ -160,11 +181,8 @@ a
     margin-top .75rem
     margin-bottom .75rem
 
-  @media screen and (min-width breakpoint)
-    &
-      max-width 50%
-
-      p
+    @media screen and (min-width breakpoint)
+      &
         margin-top 1rem
         margin-bottom 1rem
 
@@ -210,7 +228,8 @@ a
 
   @media screen and (min-width breakpoint)
     &
-      max-width 20%
+      width 30%
+      max-width 15rem
 
 @font-face
   font-family Hi Melody
