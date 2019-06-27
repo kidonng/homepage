@@ -1,0 +1,26 @@
+{
+  "name": "kidonng.me",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "now-build": "yarn build"
+  },
+  "dependencies": {
+    "minireset.css": "^0.0.5",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.8.4",
+    "prettier": "^1.18.2",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
