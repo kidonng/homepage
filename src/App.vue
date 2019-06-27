@@ -63,7 +63,7 @@ export default {
       },
       {
         title: 'TG',
-        href: 'tg://resolve?domain=kidonng'
+        href: 'https://t.me/kidonng'
       },
       {
         title: 'Email',
@@ -135,7 +135,7 @@ a
   background-image url(assets/bg.png)
   background-repeat no-repeat
   background-size cover
-  opacity .6
+  opacity .5
 
   @media screen and (max-width breakpoint)
     &
