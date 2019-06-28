@@ -4,7 +4,7 @@ div
 
   .profile
     img.avatar(
-      src="https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200"
+      :src="avatar"
       alt="Avatar"
       title="Bio"
       @click="hideBio = false"
@@ -39,6 +39,7 @@ div
 export default {
   data: () => ({
     name: 'kidonng',
+    avatar: 'https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200',
     bioTitle: 'Howdy!',
     bioText: `
       <p>
