@@ -7,7 +7,7 @@ div
       :src="avatar"
       alt="Avatar"
       title="Bio"
-      @click="hideBio = false"
+      @click="showBio = true"
     )
 
     .column
@@ -18,28 +18,30 @@ div
         :rel="link.href.startsWith('http') && 'noreferrer noopener'"
       ) {{ link.title }}
 
-  .bio(:class="{ hide: hideBio }")
-    h2.title
-      | {{ bioTitle }}
-      svg.close(viewBox="0 0 24 24" @click="hideBio = true")
-        path(fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z")
-    .text(v-html="bioText")
+  transition(name="fade")
+    .bio(v-if="showBio")
+      h2.title
+        | {{ bioTitle }}
+        svg.close(viewBox="0 0 24 24" @click="showBio = false")
+          path(fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z")
+      .text(v-html="bioText")
 
-    h2.title Projects
-    ul.projects: li(v-for="project in projects" :key="project.title")
-      a(
-        :href="project.href"
-        target="_blank"
-        rel="noreferrer noopener"
-      ) {{ project.title }}
-      | {{ project.description }}
+      h2.title Projects
+      ul.projects: li(v-for="project in projects" :key="project.title")
+        a(
+          :href="project.href"
+          target="_blank"
+          rel="noreferrer noopener"
+        ) {{ project.title }}
+        | {{ project.description }}
 </template>
 
 <script>
 export default {
   data: () => ({
     name: 'kidonng',
-    avatar: 'https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200',
+    avatar:
+      'https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200',
     bioTitle: 'Howdy!',
     bioText: `
       <p>
@@ -99,7 +101,7 @@ export default {
         href: 'https://github.com/kidonng/sachan'
       }
     ],
-    hideBio: true
+    showBio: false
   })
 }
 </script>
@@ -148,16 +150,19 @@ a
   position absolute
   top 0
   background-color white
-  transition opacity .5s
 
   @media screen and (min-width breakpoint)
     &
       padding-right 25vw
       padding-left 25vw
 
-  &.hide
-    opacity 0
-    pointer-events none
+.fade-enter-active
+.fade-leave-active
+  transition opacity .5s
+
+.fade-enter
+.fade-leave-to
+  opacity 0
 
 .title
   font-size 1.5rem
