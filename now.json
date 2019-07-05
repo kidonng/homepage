@@ -4,7 +4,9 @@
   "routes": [
     {
       "src": ".*",
-      "headers": { "strict-transport-security": "max-age=31536000; preload" }
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+      }
     }
   ],
   "alias": "kidonng.me"
