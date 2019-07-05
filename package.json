@@ -1,6 +1,9 @@
 {
   "name": "kidonng.me",
   "private": true,
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
