@@ -6,7 +6,17 @@
       "src": ".*",
       "headers": {
         "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
-      }
+      },
+      "continue": true
+    },
+    {
+      "src": "^/((js|css|img)/.*|favicon.ico)",
+      "headers": { "cache-control": "max-age=31536000, immutable" }
+    },
+    {
+      "src": "/.+",
+      "status": 301,
+      "headers": { "location": "https://kidonng.me/" }
     }
   ],
   "alias": "kidonng.me"

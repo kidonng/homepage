@@ -1,9 +1,6 @@
 {
   "name": "kidonng.me",
   "private": true,
-  "engines": {
-    "node": "10.x"
-  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -22,6 +19,9 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.10"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "prettier": {
     "semi": false,
