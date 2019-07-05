@@ -1,5 +1,11 @@
 {
   "version": 2,
   "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "routes": [
+    {
+      "src": ".*",
+      "headers": { "strict-transport-security": "max-age=31536000; preload" }
+    }
+  ],
   "alias": "kidonng.me"
 }
