@@ -10,7 +10,7 @@
       "continue": true
     },
     {
-      "src": "^/(js|css|img)/.*",
+      "src": "^/((js|css|img)/.*|favicon.ico)",
       "headers": { "cache-control": "max-age=31536000, immutable" }
     },
     {
