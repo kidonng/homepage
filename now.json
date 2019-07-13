@@ -10,14 +10,11 @@
       "continue": true
     },
     {
-      "src": "^/((js|css|img)/.*|favicon.ico)",
+      "src": "^/(js|css|img)/.*",
       "headers": { "cache-control": "max-age=31536000, immutable" }
     },
-    {
-      "src": "/.+",
-      "status": 301,
-      "headers": { "location": "https://kidonng.me/" }
-    }
+    { "handle": "filesystem" },
+    { "src": ".*", "status": 404, "dest": "404.html" }
   ],
   "alias": "kidonng.me"
 }

@@ -80,6 +80,11 @@ export default {
         href: 'https://github.com/kidonng/pixiv-collection'
       },
       {
+        title: 'Scoop Docs',
+        description: 'Scoop documentation done right',
+        href: 'https://github.com/kidonng/scoop-docs'
+      },
+      {
         title: 'NCU Net',
         description:
           'A client for NCU Campus Network Access Authentication System',
@@ -135,7 +140,7 @@ a
 
 .bg
   overlay()
-  background-image url(assets/bg.png)
+  background-image url(assets/bg.jpg)
   background-repeat no-repeat
   background-size cover
   opacity .5
