@@ -80,6 +80,11 @@ export default {
         href: 'https://github.com/kidonng/pixiv-collection'
       },
       {
+        title: 'Scoop Docs',
+        description: 'Scoop documentation done right',
+        href: 'https://github.com/kidonng/scoop-docs'
+      },
+      {
         title: 'NCU Net',
         description:
           'A client for NCU Campus Network Access Authentication System',
