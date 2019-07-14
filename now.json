@@ -14,11 +14,7 @@
       "headers": { "cache-control": "max-age=31536000, immutable" }
     },
     { "handle": "filesystem" },
-    {
-      "src": "/.*",
-      "status": 301,
-      "headers": { "location": "/" }
-    }
+    { "src": ".*", "status": 404, "dest": "404.html" }
   ],
   "alias": "kidonng.me"
 }
