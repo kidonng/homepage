@@ -140,7 +140,7 @@ a
 
 .bg
   overlay()
-  background-image url(assets/bg.png)
+  background-image url(assets/bg.jpg)
   background-repeat no-repeat
   background-size cover
   opacity .5
