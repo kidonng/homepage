@@ -135,13 +135,6 @@ overlay()
   height 100vh
   width 100vw
 
-padding()
-  padding 1rem
-
-  @media screen and (min-width: breakpoint)
-    &
-      padding 2rem
-
 body
   font-family B612, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, Arial, sans-serif
   line-height 1.5
@@ -167,13 +160,14 @@ a
 
 .bio
   overlay()
-  padding()
   position absolute
   top 0
   background-color white
+  padding 1.5rem
 
   @media screen and (min-width: breakpoint)
     &
+      padding-top 2rem
       padding-right 25vw
       padding-left 25vw
 
@@ -191,7 +185,7 @@ a
   justify-content space-between
 
 .close
-  width 1.5rem
+  width 2rem
   cursor pointer
 
   path
@@ -228,12 +222,16 @@ a
       content ' - '
 
 .profile
-  padding()
   position absolute
   bottom 0
   display flex
   user-select none
   width 100%
+  padding 1rem
+
+  @media screen and (min-width: breakpoint)
+    &
+      padding 2rem
 
 .avatar
   width 100px
