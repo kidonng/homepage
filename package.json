@@ -14,7 +14,7 @@
   "devDependencies": {
     "@vue/cli-service": "^3.10.0",
     "prettier": "^1.18.2",
-    "stylus": "^0.54.5",
+    "stylus": "^0.54.6",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.10"
   },
