@@ -2,12 +2,12 @@
 
 <div align="center">
 
-[![Website](https://img.shields.io/website/https/kidonng.me.svg?style=for-the-badge)](https://kidonng.me/)
-[![GitHub](https://img.shields.io/github/license/kidonng/kidonng.me.svg?style=for-the-badge)](LICENSE)
+[![Website status](https://img.shields.io/website/https/kidonng.me.svg?style=for-the-badge)](https://kidonng.me/)
+[![License](https://img.shields.io/github/license/kidonng/kidonng.me.svg?style=for-the-badge)](LICENSE)
 
 </div>
 
-kidonng's homepage.
+[@kidonng](https://github.com/kidonng)'s homepage.
 
 ## Development
 

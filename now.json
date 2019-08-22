@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
   "routes": [
     {
       "src": ".*",
@@ -8,13 +7,7 @@
         "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
       },
       "continue": true
-    },
-    {
-      "src": "^/(js|css|img)/.*",
-      "headers": { "cache-control": "max-age=31536000, immutable" }
-    },
-    { "handle": "filesystem" },
-    { "src": ".*", "dest": "/" }
+    }
   ],
   "alias": "kidonng.me"
 }
