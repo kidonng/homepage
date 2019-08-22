@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "now-build": "yarn build"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "ga-lite": "^2.0.1",
@@ -12,10 +11,13 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "@types/google.analytics": "^0.0.40",
+    "@vue/cli-plugin-typescript": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
     "prettier": "^1.18.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.10"
   },
   "engines": {

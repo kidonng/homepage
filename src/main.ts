@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import galite from 'ga-lite'
-import App from './App'
+import App from './App.vue'
 import 'minireset.css'
-
-if (location.pathname !== '/') history.replaceState(null, null, '/')
 
 galite('create', 'UA-140053908-1', 'auto')
 galite('send', 'pageview')
