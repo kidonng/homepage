@@ -2528,10 +2528,10 @@ function-bind@^1.0.2, function-bind@^1.1.1:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
-ga-lite@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/ga-lite/-/ga-lite-2.0.1.tgz#91f4031ee578b8d8e2a45a7eca56082f7c71338b"
-  integrity sha512-ZhUSYmRbB94hc5tA7BQ7zHK/kVdEfaQZQW/ejlgex3WvuKRTUWQMPITs/PWIUXv8ed6JPaNpEm/wj7GrdA6UNQ==
+ga-lite@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/ga-lite/-/ga-lite-2.0.4.tgz#a87eda5d8bfb3ec2deb878a5b51ddd0fafadae21"
+  integrity sha512-126JkzteKfl1ic06SUOsSLwc3KTHoPMN/tiO4xYSHM1+f7h2BiiRsBHFwyeGIwwV23aRRwEjdDiSpN07p00iUA==
 
 gauge@~2.7.3:
   version "2.7.4"
