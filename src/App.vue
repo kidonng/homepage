@@ -76,7 +76,7 @@ export default Vue.extend({
     showBio: false,
     links: {
       GitHub: 'https://github.com/kidonng',
-      Blog: 'https://www.yuque.com/kidonng/blog',
+      Blog: 'https://www.notion.so/8934295471644607ae5f5a832682dba5',
       Telegram: 'https://t.me/kidonng',
       Email: 'mailto:kidonng@gmail.com'
     },
