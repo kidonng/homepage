@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![Website status](https://img.shields.io/website/https/kidonng.me.svg?style=for-the-badge)](https://kidonng.me/)
-[![License](https://img.shields.io/github/license/kidonng/kidonng.me.svg?style=for-the-badge)](LICENSE)
+[![Website status](https://img.shields.io/website/https/inu.codes.svg?style=for-the-badge)](https://inu.codes/)
+[![License](https://img.shields.io/github/license/kidonng/homepage.svg?style=for-the-badge)](LICENSE)
 
 </div>
 

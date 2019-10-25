@@ -1,5 +1,5 @@
 {
-  "name": "kidonng.me",
+  "name": "homepage",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
