@@ -1,5 +1,5 @@
 {
-  "name": "kidonng.me",
+  "name": "xuann.wang",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -19,9 +19,6 @@
     "stylus-loader": "^3.0.2",
     "typescript": "^3.6.3",
     "vue-template-compiler": "^2.6.10"
-  },
-  "engines": {
-    "node": "10.x"
   },
   "vue": {
     "filenameHashing": false

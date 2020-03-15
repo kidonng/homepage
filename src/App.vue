@@ -21,7 +21,7 @@
     <transition name="fade">
       <div class="bio" v-if="showBio">
         <h2 class="title spacing">
-          Howdy!
+          Hi, this is Kid.
           <button class="close" title="Hide biography" @click="showBio = false">
             <svg viewBox="0 0 24 24">
               <path
@@ -31,38 +31,14 @@
           </button>
         </h2>
         <p class="text">
-          I'm a student at
-          <a href="https://www.ncu.edu.cn/">Nanchang University</a>
-          and web developer at
-          <a href="https://team.ncuos.com/">NCUHOME</a>.
+          I'm a web developer at <a href="https://team.ncuos.com/">NCUHOME</a>.
         </p>
         <p class="text">
-          Besides open source, I
-          <a
-            href="https://music.163.com/#/user/home?id=1655022829"
-            title="My Netease Cloud Music profile"
-            >listen to music</a
-          >,
-          <a
-            href="https://ja.wikipedia.org/wiki/なもり"
-            title="View なもり on Wikipedia"
-            >enjoy Namori's drawings</a
-          >
-          and
-          <a href="https://osu.ppy.sh/users/14347155" title="My osu! profile"
-            >play osu!</a
-          >
-          for fun.
+          Know more about me on <a href="https://zh.wikipedia.org/wiki/User:Kidonng">Wikipedia</a>.
         </p>
-        <div v-for="(list, title) in projects" :key="title">
-          <h2 class="title">{{ title }}</h2>
-          <ul class="projects">
-            <li v-for="(desc, name) in list" :key="name">
-              <a :href="`https://github.com/kidonng/${name}`">{{ name }}</a>
-              <span>{{ desc }}</span>
-            </li>
-          </ul>
-        </div>
+        <p class="text">
+          Contact me via <a href="https://t.me/kidonng">Telegram</a> or <a href="mailto:kidonng@gmail.com">email</a>.
+        </p>
       </div>
     </transition>
   </main>
@@ -75,31 +51,9 @@ export default Vue.extend({
   data: () => ({
     showBio: false,
     links: {
-      GitHub: 'https://github.com/kidonng',
-      Blog: 'https://www.yuque.com/kidonng/blog',
-      Telegram: 'https://t.me/kidonng',
-      Email: 'mailto:kidonng@gmail.com'
-    },
-    projects: {
-      'I create websites': {
-        'pixiv-collection': '🅿️ Simple pixiv collection showcase',
-        'scoop-docs': '📚 Scoop documentation done right',
-        readhub: '📖 Simple Readhub application',
-        'xkcd-why': '❓ Get a random question from xkcd list'
-      },
-      'I make modules': {
-        'ncu-net':
-          '📶 A client for NCU Campus Network Access Authentication System',
-        'sachan-bot': '🤖 Multifunctional Telegram bot',
-        'saber-plugin-medium-zoom': '🔍 medium-zoom plugin for Saber',
-        inob: '👀 Yet another IntersectionObserver wrapper',
-        headroom: '↕ The same old headroom simplified',
-        'vue-router-ga-lite': '📊 Integrate ga-lite with Vue Router'
-      },
-      'I write scripts': {
-        cherry: '🍒 Handcrafted user scripts, user styles & bookmarklets',
-        'deno-scripts': '🦖 Casual Deno scripts'
-      }
+      'Long Thoughts': 'https://www.notion.so/8934295471644607ae5f5a832682dba5',
+      'Short Thoughts': 'https://t.me/s/kidaydream',
+      Code: 'https://github.com/kidonng'
     }
   }),
   mounted() {
@@ -215,20 +169,6 @@ button
   @media screen and (min-width: breakpoint)
     &
       margin-bottom gap-3
-
-.projects
-  li
-    margin-bottom gap-1
-
-    @media screen and (min-width: breakpoint)
-      &
-        margin-bottom gap-2
-
-    &::before
-      content '- '
-
-  span::before
-    content ' = '
 
 .profile
   position absolute
