@@ -2,7 +2,12 @@
   <main>
     <div class="bg"></div>
     <div class="profile">
-      <button class="avatar" title="Show biography" @click="showBio = true">
+      <button
+        class="avatar"
+        ref="avatar"
+        title="Show biography"
+        @click="showBio"
+      >
         <img
           src="https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200"
           alt="Avatar"
@@ -18,11 +23,16 @@
         </ul>
       </div>
     </div>
-    <transition name="fade">
-      <div class="bio" v-if="showBio">
+    <transition name="fade" @enter="adjustFocus">
+      <div class="bio" v-if="bio">
         <h2 class="title spacing">
           Hi, this is Kid.
-          <button class="close" title="Hide biography" @click="showBio = false">
+          <button
+            class="close"
+            ref="close"
+            title="Hide biography"
+            @click="hideBio"
+          >
             <svg viewBox="0 0 24 24">
               <path
                 d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
@@ -31,14 +41,25 @@
           </button>
         </h2>
         <p class="text">
-          I'm a web developer at <a href="https://team.ncuos.com/">NCUHOME</a>.
+          I'm a web developer at <a href="https://team.ncuos.com/">NCUHOME</a>.
         </p>
         <p class="text">
-          Know more about me on <a href="https://zh.wikipedia.org/wiki/User:Kidonng">Wikipedia</a>.
+          I think by writing and create for fun.
         </p>
         <p class="text">
-          Contact me via <a href="https://t.me/kidonng">Telegram</a> or <a href="mailto:kidonng@gmail.com">email</a>.
+          (Here used to be more text 😜)
         </p>
+        <p class="text">
+          More about me on my
+          <a href="https://zh.wikipedia.org/wiki/User:Kidonng"
+            >Wikipedia user page</a
+          >.
+        </p>
+        <h2 class="title">Contact</h2>
+        <ul>
+          <li><a href="https://t.me/kidonng">Telegram</a></li>
+          <li><a href="mailto:kidonng@gmail.com">Email</a></li>
+        </ul>
       </div>
     </transition>
   </main>
@@ -49,16 +70,28 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data: () => ({
-    showBio: false,
+    bio: false,
     links: {
       'Long Thoughts': 'https://www.notion.so/8934295471644607ae5f5a832682dba5',
       'Short Thoughts': 'https://t.me/s/kidaydream',
       Code: 'https://github.com/kidonng'
     }
   }),
+  methods: {
+    showBio() {
+      this.bio = true
+    },
+    adjustFocus() {
+      ;(this.$refs.close as HTMLElement).focus()
+    },
+    hideBio() {
+      this.bio = false
+      ;(this.$refs.avatar as HTMLElement).focus()
+    }
+  },
   mounted() {
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && this.showBio) this.showBio = false
+      if (e.key === 'Escape' && this.bio) this.hideBio()
     })
   }
 })
@@ -66,9 +99,9 @@ export default Vue.extend({
 
 <style lang="stylus">
 breakpoint = 600px
-gap-1 = .25rem
-gap-2 = .5rem
-gap-3 = 1rem
+gap-1 = .5rem
+gap-2 = 1rem
+gap-3 = 1.5rem
 gap-4 = 2rem
 font-1 = 1.5rem
 font-2 = 2.5rem
@@ -133,20 +166,29 @@ button
     background-color black
     color white
 
+  li
+    margin-bottom gap-1
+    @media screen and (min-width: breakpoint)
+      &
+        margin-bottom gap-2
+
+    &::before
+      content '- '
+
 .title
   color black
   font-size font-1
-  margin-bottom gap-2
+  margin-bottom gap-1
 
   &:not(:first-of-type)
-    margin-top gap-2
+    margin-top gap-1
 
   @media screen and (min-width: breakpoint)
     &
-      margin-bottom gap-3
+      margin-bottom gap-2
 
       &:not(:first-of-type)
-        margin-top gap-3
+        margin-top gap-2
 
 .spacing
   display flex
@@ -164,18 +206,18 @@ button
     fill translucent
 
 .text
-  margin-bottom gap-2
+  margin-bottom gap-1
 
   @media screen and (min-width: breakpoint)
     &
-      margin-bottom gap-3
+      margin-bottom gap-2
 
 .profile
   position absolute
   bottom 0
   user-select none
   -moz-user-select none
-  margin gap-3
+  margin gap-2
 
   @media screen and (min-width: breakpoint)
     &
@@ -209,12 +251,12 @@ button
 .link
   @media screen and (max-width: breakpoint)
     &
-      margin-bottom gap-2
+      margin-bottom gap-1
 
   @media screen and (min-width: breakpoint)
     &
       display inline
-      margin-right gap-3
+      margin-right gap-2
 
   a
     text-decoration none
