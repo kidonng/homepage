@@ -6,7 +6,7 @@
         class="avatar"
         ref="avatar"
         title="Show biography"
-        @click="showBio"
+        @click="toggleBio"
       >
         <img
           src="https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200"
@@ -31,7 +31,7 @@
             class="close"
             ref="close"
             title="Hide biography"
-            @click="hideBio"
+            @click="toggleBio"
           >
             <svg viewBox="0 0 24 24">
               <path
@@ -71,6 +71,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data: () => ({
     bio: false,
+    keyboard: false,
     links: {
       'Long Thoughts': 'https://www.notion.so/8934295471644607ae5f5a832682dba5',
       'Short Thoughts': 'https://t.me/s/kidaydream',
@@ -78,20 +79,24 @@ export default Vue.extend({
     }
   }),
   methods: {
-    showBio() {
-      this.bio = true
+    toggleBio(e: { x: number; y: number }) {
+      this.bio = !this.bio
+      if (e.x === 0 && e.y === 0) {
+        // Keyboard triggered click
+        if (this.bio) this.keyboard = true
+        else (this.$refs.avatar as HTMLElement).focus()
+      }
     },
     adjustFocus() {
-      ;(this.$refs.close as HTMLElement).focus()
-    },
-    hideBio() {
-      this.bio = false
-      ;(this.$refs.avatar as HTMLElement).focus()
+      if (this.keyboard) {
+        this.keyboard = false
+        ;(this.$refs.close as HTMLElement).focus()
+      }
     }
   },
   mounted() {
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && this.bio) this.hideBio()
+      if (this.bio && e.key === 'Escape') this.toggleBio({ x: 0, y: 0 })
     })
   }
 })
