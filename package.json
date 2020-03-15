@@ -14,7 +14,7 @@
     "@types/google.analytics": "0.0.40",
     "@vue/cli-plugin-typescript": "3.11.0",
     "@vue/cli-service": "3.11.0",
-    "prettier": "1.18.2",
+    "prettier": "1.19.1",
     "stylus": "0.54.7",
     "stylus-loader": "3.0.2",
     "typescript": "3.6.3",
