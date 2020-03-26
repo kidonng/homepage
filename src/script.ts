@@ -31,3 +31,7 @@ document.addEventListener('keydown', (e) => {
   if (!bio.classList.contains('hidden') && e.key === 'Escape')
     toggleBio({ x: 0, y: 0 })
 })
+
+document.querySelector<HTMLAnchorElement>('.email').href = window.atob(
+  'bWFpbHRvOmtpZG9ubmdAZ21haWwuY29t'
+)

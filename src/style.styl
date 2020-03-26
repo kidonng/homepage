@@ -60,6 +60,32 @@ button
     background-color black
     color white
 
+  h2
+    color black
+    font-size font-1
+    margin-bottom gap-1
+
+    &:first-of-type
+      display flex
+      justify-content space-between
+
+    &:not(:first-of-type)
+      margin-top gap-1
+
+    @media screen and (min-width: breakpoint)
+      &
+        margin-bottom gap-2
+
+        &:not(:first-of-type)
+          margin-top gap-2
+
+  p
+    margin-bottom gap-1
+
+    @media screen and (min-width: breakpoint)
+      &
+        margin-bottom gap-2
+
   li
     margin-bottom gap-1
 
@@ -69,25 +95,6 @@ button
 
     &::before
       content '- '
-
-.title
-  color black
-  font-size font-1
-  margin-bottom gap-1
-
-  &:not(:first-of-type)
-    margin-top gap-1
-
-  @media screen and (min-width: breakpoint)
-    &
-      margin-bottom gap-2
-
-      &:not(:first-of-type)
-        margin-top gap-2
-
-.spacing
-  display flex
-  justify-content space-between
 
 .close
   width font-1
@@ -99,13 +106,6 @@ button
 
   &:hover path
     fill translucent
-
-.text
-  margin-bottom gap-1
-
-  @media screen and (min-width: breakpoint)
-    &
-      margin-bottom gap-2
 
 .profile
   position absolute
