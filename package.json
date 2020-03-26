@@ -2,26 +2,19 @@
   "name": "xuann.wang",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "parcel src/index.html",
+    "build": "parcel build --no-content-hash src/index.html"
   },
   "dependencies": {
-    "ga-lite": "2.0.5",
-    "minireset.css": "0.0.6",
-    "vue": "2.6.11"
+    "ga-lite": "^2.0.5",
+    "minireset.css": "^0.0.6"
   },
   "devDependencies": {
-    "@types/google.analytics": "0.0.40",
-    "@vue/cli-plugin-typescript": "4.2.3",
-    "@vue/cli-service": "4.2.3",
-    "prettier": "2.0.2",
-    "stylus": "0.54.7",
-    "stylus-loader": "3.0.2",
-    "typescript": "3.8.3",
-    "vue-template-compiler": "2.6.11"
-  },
-  "vue": {
-    "filenameHashing": false
+    "@types/google.analytics": "^0.0.40",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.2",
+    "stylus": "^0.54.7",
+    "typescript": "^3.8.3"
   },
   "prettier": {
     "semi": false,

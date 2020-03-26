@@ -1,0 +1,160 @@
+@import 'minireset.css'
+
+breakpoint = 600px
+gap-1 = .5rem
+gap-2 = 1rem
+gap-3 = 1.5rem
+gap-4 = 2rem
+font-1 = 1.5rem
+font-2 = 2.5rem
+font-3 = 3rem
+timing-1 = .25s
+timing-2 = .5s
+transparency = .5
+translucent = transparentify(black transparency)
+
+main
+  color #4a4a4a
+  font-family B612 Mono, monospace
+  line-height 1.5
+
+a
+  color black
+
+button
+  background none
+  border 0
+  padding 0
+
+.bg
+  height 100vh
+  background-image url('../assets/bg.webp')
+  background-size cover
+  opacity transparency * 1.2
+
+  @media screen and (max-width: breakpoint)
+    &
+      background-position-x 40%
+
+.bio
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  background-color white
+  transition opacity timing-2, visibility timing-2
+  padding gap-3
+
+  @media screen and (min-width: breakpoint)
+    &
+      padding-left 25vw
+      padding-right 25vw
+
+  &.hidden
+    opacity 0
+    visibility hidden
+
+  a:hover
+    text-decoration none
+    background-color black
+    color white
+
+  li
+    margin-bottom gap-1
+
+    @media screen and (min-width: breakpoint)
+      &
+        margin-bottom gap-2
+
+    &::before
+      content '- '
+
+.title
+  color black
+  font-size font-1
+  margin-bottom gap-1
+
+  &:not(:first-of-type)
+    margin-top gap-1
+
+  @media screen and (min-width: breakpoint)
+    &
+      margin-bottom gap-2
+
+      &:not(:first-of-type)
+        margin-top gap-2
+
+.spacing
+  display flex
+  justify-content space-between
+
+.close
+  width font-1
+  vertical-align middle
+  cursor pointer
+
+  path
+    transition fill timing-1
+
+  &:hover path
+    fill translucent
+
+.text
+  margin-bottom gap-1
+
+  @media screen and (min-width: breakpoint)
+    &
+      margin-bottom gap-2
+
+.profile
+  position absolute
+  bottom 0
+  user-select none
+  -moz-user-select none
+  margin gap-2
+
+  @media screen and (min-width: breakpoint)
+    &
+      display flex
+      margin gap-4
+
+.avatar
+  width 100px
+  transition opacity timing-1
+  cursor pointer
+
+  @media screen and (min-width: breakpoint)
+    &
+      margin-right gap-4
+
+  &:hover
+    opacity transparency
+
+  img
+    border-radius 100%
+
+.name
+  color black
+  font-family Gaegu, cursive
+  font-size font-2
+
+  @media screen and (min-width: breakpoint)
+    &
+      font-size font-3
+
+.links a
+  text-decoration none
+  transition color timing-1
+
+  &:hover
+    color translucent
+
+  @media screen and (max-width: breakpoint)
+    &
+      display block
+      margin-bottom gap-1
+
+  @media screen and (min-width: breakpoint)
+    &
+      margin-right gap-2
