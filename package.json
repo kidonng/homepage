@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "ga-lite": "^2.0.5",
-    "minireset.css": "^0.0.6"
+    "minireset.css": "^0.0.6",
+    "parcel-plugin-inliner": "^1.0.14"
   },
   "devDependencies": {
     "@types/google.analytics": "^0.0.40",
