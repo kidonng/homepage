@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build --no-content-hash src/index.html"
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
     "ga-lite": "2.0.5",
