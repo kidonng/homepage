@@ -13,7 +13,7 @@
     "@types/google.analytics": "0.0.40",
     "parcel-bundler": "1.12.4",
     "parcel-plugin-inliner": "1.0.14",
-    "prettier": "2.0.2",
+    "prettier": "2.0.5",
     "stylus": "0.54.7",
     "typescript": "3.8.3"
   },
