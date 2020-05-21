@@ -5,7 +5,10 @@ ga('send', 'pageview')
 
 const bio = document.querySelector<HTMLElement>('.bio')
 const avatar = document.querySelector<HTMLElement>('.avatar')
+const language = document.querySelector<HTMLElement>('.language')
 const close = document.querySelector<HTMLElement>('.close')
+const english = document.querySelector<HTMLElement>('.english')
+const chinese = document.querySelector<HTMLElement>('.chinese')
 let mouse = true
 
 const toggleBio = (e: { x: number; y: number }) => {
@@ -24,14 +27,20 @@ const adjustFocus = () => {
   }
 }
 
+const switchLanguage = () => {
+  english.hidden = !english.hidden
+  chinese.hidden = !chinese.hidden
+}
+
 bio.addEventListener('transitionstart', adjustFocus)
 avatar.addEventListener('click', toggleBio)
+language.addEventListener('click', switchLanguage)
 close.addEventListener('click', toggleBio)
 document.addEventListener('keydown', (e) => {
   if (!bio.classList.contains('hidden') && e.key === 'Escape')
     toggleBio({ x: 0, y: 0 })
 })
 
-document.querySelector<HTMLAnchorElement>('.email').href = window.atob(
-  'bWFpbHRvOmtpZG9ubmdAZ21haWwuY29t'
-)
+document
+  .querySelectorAll<HTMLAnchorElement>('.email')
+  .forEach((el) => (el.href = window.atob('bWFpbHRvOmtpZG9ubmdAZ21haWwuY29t')))

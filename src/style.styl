@@ -15,7 +15,7 @@ translucent = transparentify(black transparency)
 
 main
   color #4a4a4a
-  font-family B612 Mono, monospace
+  font-family B612 Mono, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, monospace
   line-height 1.5
 
 a
@@ -32,7 +32,7 @@ button
   background-size cover
   opacity transparency * 1.2
 
-  @media screen and (max-width: 1920px)
+  @media screen and (max-width 1920px)
     &
       background-position-x 40%
 
@@ -46,7 +46,7 @@ button
   transition opacity timing-2, visibility timing-2
   padding gap-3
 
-  @media screen and (min-width: breakpoint)
+  @media screen and (min-width breakpoint)
     &
       padding-left 25vw
       padding-right 25vw
@@ -65,14 +65,10 @@ button
     font-size font-1
     margin-bottom gap-1
 
-    &:first-of-type
-      display flex
-      justify-content space-between
-
     &:not(:first-of-type)
       margin-top gap-1
 
-    @media screen and (min-width: breakpoint)
+    @media screen and (min-width breakpoint)
       &
         margin-bottom gap-2
 
@@ -82,30 +78,43 @@ button
   p
     margin-bottom gap-1
 
-    @media screen and (min-width: breakpoint)
+    @media screen and (min-width breakpoint)
       &
         margin-bottom gap-2
 
   li
     margin-bottom gap-1
 
-    @media screen and (min-width: breakpoint)
+    @media screen and (min-width breakpoint)
       &
         margin-bottom gap-2
 
     &::before
       content '- '
 
-.close
+.button
   width font-1
-  vertical-align middle
   cursor pointer
+  position absolute
+  top gap-3 + gap-1 * .5
 
   path
     transition fill timing-1
 
   &:hover path
     fill translucent
+
+.language
+  right gap-4 * 2
+
+  @media screen and (min-width breakpoint)
+    right 25vw + gap-4 * 2
+
+.close
+  right gap-3
+
+  @media screen and (min-width breakpoint)
+    right 25vw
 
 .profile
   position absolute
@@ -114,7 +123,7 @@ button
   -moz-user-select none
   margin gap-2
 
-  @media screen and (min-width: breakpoint)
+  @media screen and (min-width breakpoint)
     &
       display flex
       margin gap-4
@@ -124,7 +133,7 @@ button
   transition opacity timing-1
   cursor pointer
 
-  @media screen and (min-width: breakpoint)
+  @media screen and (min-width breakpoint)
     &
       margin-right gap-4
 
@@ -139,7 +148,7 @@ button
   font-family Gaegu, cursive
   font-size font-2
 
-  @media screen and (min-width: breakpoint)
+  @media screen and (min-width breakpoint)
     &
       font-size font-3
 
@@ -150,11 +159,11 @@ button
   &:hover
     color translucent
 
-  @media screen and (max-width: breakpoint)
+  @media screen and (max-width breakpoint)
     &
       display block
       margin-bottom gap-1
 
-  @media screen and (min-width: breakpoint)
+  @media screen and (min-width breakpoint)
     &
       margin-right gap-2
