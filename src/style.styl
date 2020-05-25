@@ -12,14 +12,23 @@ timing-1 = .25s
 timing-2 = .5s
 transparency = .5
 translucent = transparentify(black transparency)
+text = #4a4a4a
+link = black
+biobg = white
+h2color = black
+namecolor = black
+bgurl = url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/assets/bg.webp')
 
 main
-  color #4a4a4a
+  color text
   font-family B612 Mono, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, monospace
   line-height 1.5
 
 a
-  color black
+  color link
+
+  @media (prefers-color-scheme dark)
+    color invert(link)
 
 button
   background none
@@ -28,13 +37,15 @@ button
 
 .bg
   height 100vh
-  background-image url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/assets/bg.webp')
+  background-image bgurl
   background-size cover
   opacity transparency * 1.2
 
   @media screen and (max-width 1920px)
-    &
-      background-position-x 40%
+    background-position-x 40%
+
+  @media (prefers-color-scheme dark)
+    background-image linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), bgurl
 
 .bio
   position absolute
@@ -42,14 +53,17 @@ button
   right 0
   bottom 0
   left 0
-  background-color white
+  background-color biobg
   transition opacity timing-2, visibility timing-2
   padding gap-3
 
   @media screen and (min-width breakpoint)
-    &
-      padding-left 25vw
-      padding-right 25vw
+    padding-left 25vw
+    padding-right 25vw
+
+  @media (prefers-color-scheme dark)
+    background-color invert(biobg)
+    color invert(text)
 
   &.hidden
     opacity 0
@@ -57,37 +71,41 @@ button
 
   a:hover
     text-decoration none
-    background-color black
-    color white
+    background-color link
+    color biobg
+
+    @media (prefers-color-scheme dark)
+      background-color invert(link)
+      color invert(biobg)
 
   h2
-    color black
+    color h2color
     font-size font-1
     margin-bottom gap-1
+
+    @media (prefers-color-scheme dark)
+      color invert(h2color)
 
     &:not(:first-of-type)
       margin-top gap-1
 
     @media screen and (min-width breakpoint)
-      &
-        margin-bottom gap-2
+      margin-bottom gap-2
 
-        &:not(:first-of-type)
-          margin-top gap-2
+      &:not(:first-of-type)
+        margin-top gap-2
 
   p
     margin-bottom gap-1
 
     @media screen and (min-width breakpoint)
-      &
-        margin-bottom gap-2
+      margin-bottom gap-2
 
   li
     margin-bottom gap-1
 
     @media screen and (min-width breakpoint)
-      &
-        margin-bottom gap-2
+      margin-bottom gap-2
 
     &::before
       content '- '
@@ -101,8 +119,14 @@ button
   path
     transition fill timing-1
 
+    @media (prefers-color-scheme dark)
+      fill invert(black)
+
   &:hover path
     fill translucent
+
+    @media (prefers-color-scheme dark)
+      fill invert(translucent)
 
 .language
   right gap-4 * 2
@@ -124,9 +148,8 @@ button
   margin gap-2
 
   @media screen and (min-width breakpoint)
-    &
-      display flex
-      margin gap-4
+    display flex
+    margin gap-4
 
 .avatar
   width 100px
@@ -134,8 +157,7 @@ button
   cursor pointer
 
   @media screen and (min-width breakpoint)
-    &
-      margin-right gap-4
+    margin-right gap-4
 
   &:hover
     opacity transparency
@@ -144,13 +166,15 @@ button
     border-radius 100%
 
 .name
-  color black
+  color namecolor
   font-family Gaegu, cursive
   font-size font-2
 
   @media screen and (min-width breakpoint)
-    &
-      font-size font-3
+    font-size font-3
+
+  @media (prefers-color-scheme dark)
+    color invert(namecolor)
 
 .links a
   text-decoration none
@@ -160,10 +184,8 @@ button
     color translucent
 
   @media screen and (max-width breakpoint)
-    &
-      display block
-      margin-bottom gap-1
+    display block
+    margin-bottom gap-1
 
   @media screen and (min-width breakpoint)
-    &
-      margin-right gap-2
+    margin-right gap-2
