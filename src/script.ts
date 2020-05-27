@@ -3,25 +3,29 @@ import ga from 'ga-lite'
 ga('create', 'UA-140053908-1', 'auto')
 ga('send', 'pageview')
 
-const bio = document.querySelector<HTMLElement>('.bio')
+const about = document.querySelector<HTMLElement>('.about')
 const avatar = document.querySelector<HTMLElement>('.avatar')
 const language = document.querySelector<HTMLElement>('.language')
 const close = document.querySelector<HTMLElement>('.close')
 const english = document.querySelector<HTMLElement>('.english')
 const chinese = document.querySelector<HTMLElement>('.chinese')
+const profile = document.querySelector<HTMLElement>('.profile')
+const email = document.querySelectorAll<HTMLAnchorElement>('.email')
 let mouse = true
 
-const toggleBio = (e: { x: number; y: number }) => {
-  bio.classList.toggle('hidden')
-  // Not mouse triggered click
+const toggleAbout = (e: { x: number; y: number }) => {
+  about.classList.toggle('hidden')
+  profile.classList.toggle('hidden')
+
+  // Not mouse triggered toggle
   if (e.x === 0 && e.y === 0) {
-    if (bio.classList.contains('hidden')) avatar.focus()
+    if (about.classList.contains('hidden')) avatar.focus()
     else mouse = false
   }
 }
 
 const adjustFocus = () => {
-  if (!bio.classList.contains('hidden') && !mouse) {
+  if (!about.classList.contains('hidden') && !mouse) {
     mouse = true
     close.focus()
   }
@@ -32,15 +36,13 @@ const switchLanguage = () => {
   chinese.hidden = !chinese.hidden
 }
 
-bio.addEventListener('transitionstart', adjustFocus)
-avatar.addEventListener('click', toggleBio)
+about.addEventListener('transitionstart', adjustFocus)
+avatar.addEventListener('click', toggleAbout)
 language.addEventListener('click', switchLanguage)
-close.addEventListener('click', toggleBio)
+close.addEventListener('click', toggleAbout)
 document.addEventListener('keydown', (e) => {
-  if (!bio.classList.contains('hidden') && e.key === 'Escape')
-    toggleBio({ x: 0, y: 0 })
+  if (!about.classList.contains('hidden') && e.key === 'Escape')
+    toggleAbout({ x: 0, y: 0 })
 })
 
-document
-  .querySelectorAll<HTMLAnchorElement>('.email')
-  .forEach((el) => (el.href = window.atob('bWFpbHRvOmtpZG9ubmdAZ21haWwuY29t')))
+email.forEach((el) => (el.href = atob('bWFpbHRvOmtpZG9ubmdAZ21haWwuY29t')))

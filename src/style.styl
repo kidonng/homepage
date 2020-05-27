@@ -21,10 +21,19 @@ bg-url = url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/assets/bg.webp')
 main-font = 'B612 Mono', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, monospace
 name-font = Gaegu, 'Comic Sans MS', cursive
 
-main
+body
   color text
   font-family main-font
   line-height 1.5
+  height 100vh
+  background-image linear-gradient(invert(translucent), invert(translucent)), bg-url
+  background-size cover
+
+  @media screen and (max-width 1920px)
+    background-position-x 40%
+
+  @media (prefers-color-scheme dark)
+    background-image linear-gradient(translucent, translucent), bg-url
 
 a
   color link
@@ -37,18 +46,11 @@ button
   border 0
   padding 0
 
-.bg
-  height 100vh
-  background-image linear-gradient(invert(translucent), invert(translucent)), bg-url
-  background-size cover
+.hidden
+  opacity 0
+  visibility hidden
 
-  @media screen and (max-width 1920px)
-    background-position-x 40%
-
-  @media (prefers-color-scheme dark)
-    background-image linear-gradient(translucent, translucent), bg-url
-
-.bio
+.about
   position absolute
   top 0
   right 0
@@ -57,6 +59,7 @@ button
   background-color bg-color
   transition opacity timing-2, visibility timing-2
   padding gap-3
+  overflow auto
 
   @media screen and (min-width breakpoint)
     padding-left 25vw
@@ -65,10 +68,6 @@ button
   @media (prefers-color-scheme dark)
     background-color invert(bg-color)
     color invert(text)
-
-  &.hidden
-    opacity 0
-    visibility hidden
 
   a:hover
     text-decoration none
@@ -147,6 +146,7 @@ button
   user-select none
   -moz-user-select none
   margin gap-2
+  transition opacity timing-2, visibility timing-2
 
   @media screen and (min-width breakpoint)
     display flex
