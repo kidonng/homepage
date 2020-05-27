@@ -1,13 +1,10 @@
 @import 'minireset.css'
 
 breakpoint = 600px
-gap-1 = .5em
-gap-2 = 1em
-gap-3 = 1.5em
-gap-4 = 2em
-font-1 = 1.5em
-font-2 = 2.5em
-font-3 = 3em
+size-1 = .5em
+size-2 = 1em
+size-3 = 1.5em
+size-4 = 2em
 timing-1 = .25s
 timing-2 = .5s
 transparency = .4
@@ -51,14 +48,14 @@ button
   visibility hidden
 
 .about
-  position absolute
+  position fixed
   top 0
   right 0
   bottom 0
   left 0
   background-color bg-color
   transition opacity timing-2, visibility timing-2
-  padding gap-3
+  padding size-3
   overflow auto
 
   @media screen and (min-width breakpoint)
@@ -80,41 +77,41 @@ button
 
   h2
     color h2-color
-    font-size font-1
-    margin-bottom gap-1
+    font-size size-3
+    margin-bottom size-1
 
     @media (prefers-color-scheme dark)
       color invert(h2-color)
 
     &:not(:first-of-type)
-      margin-top gap-1
+      margin-top size-1
 
     @media screen and (min-width breakpoint)
-      margin-bottom gap-2
+      margin-bottom size-2
 
       &:not(:first-of-type)
-        margin-top gap-2
+        margin-top size-2
 
   p
-    margin-bottom gap-1
+    margin-bottom size-1
 
     @media screen and (min-width breakpoint)
-      margin-bottom gap-2
+      margin-bottom size-2
 
   li
-    margin-bottom gap-1
+    margin-bottom size-1
 
     @media screen and (min-width breakpoint)
-      margin-bottom gap-2
+      margin-bottom size-2
 
     &::before
       content '- '
 
-.button
-  width font-1
+.icon
+  width size-4
   cursor pointer
   position absolute
-  top gap-3 + gap-1 * .5
+  top size-4
 
   path
     transition fill timing-1
@@ -129,28 +126,28 @@ button
       fill invert(translucent)
 
 .language
-  right gap-4 * 2
+  right size-4 * 2
 
   @media screen and (min-width breakpoint)
-    right 25vw + gap-4 * 2
+    right 25vw + size-4 * 2
 
 .close
-  right gap-3
+  right size-3
 
   @media screen and (min-width breakpoint)
     right 25vw
 
 .profile
-  position absolute
+  position fixed
   bottom 0
   user-select none
   -moz-user-select none
-  margin gap-2
+  margin size-3
   transition opacity timing-2, visibility timing-2
 
   @media screen and (min-width breakpoint)
     display flex
-    margin gap-4
+    margin size-4
 
 .avatar
   width 100px
@@ -158,7 +155,7 @@ button
   cursor pointer
 
   @media screen and (min-width breakpoint)
-    margin-right gap-4
+    margin-right size-4
 
   &:hover
     opacity transparency
@@ -169,10 +166,13 @@ button
 .name
   color name-color
   font-family name-font
-  font-size font-2
+  font-size size-4 + size-1
+
+  @media screen and (max-width breakpoint)
+    line-height 1
 
   @media screen and (min-width breakpoint)
-    font-size font-3
+    font-size size-4 + size-2
 
   @media (prefers-color-scheme dark)
     color invert(name-color)
@@ -186,7 +186,7 @@ button
 
   @media screen and (max-width breakpoint)
     display block
-    margin-bottom gap-1
+    margin-top size-1
 
   @media screen and (min-width breakpoint)
-    margin-right gap-2
+    margin-right size-2
