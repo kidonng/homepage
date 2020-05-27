@@ -1,27 +1,29 @@
 @import 'minireset.css'
 
 breakpoint = 600px
-gap-1 = .5rem
-gap-2 = 1rem
-gap-3 = 1.5rem
-gap-4 = 2rem
-font-1 = 1.5rem
-font-2 = 2.5rem
-font-3 = 3rem
+gap-1 = .5em
+gap-2 = 1em
+gap-3 = 1.5em
+gap-4 = 2em
+font-1 = 1.5em
+font-2 = 2.5em
+font-3 = 3em
 timing-1 = .25s
 timing-2 = .5s
-transparency = .5
-translucent = transparentify(black transparency)
+transparency = .4
+translucent = alpha(black transparency)
 text = #4a4a4a
 link = black
-biobg = white
-h2color = black
-namecolor = black
-bgurl = url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/assets/bg.webp')
+bg-color = white
+h2-color = black
+name-color = black
+bg-url = url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/assets/bg.webp')
+main-font = 'B612 Mono', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, monospace
+name-font = Gaegu, 'Comic Sans MS', cursive
 
 main
   color text
-  font-family B612 Mono, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, monospace
+  font-family main-font
   line-height 1.5
 
 a
@@ -37,15 +39,14 @@ button
 
 .bg
   height 100vh
-  background-image bgurl
+  background-image linear-gradient(invert(translucent), invert(translucent)), bg-url
   background-size cover
-  opacity transparency * 1.2
 
   @media screen and (max-width 1920px)
     background-position-x 40%
 
   @media (prefers-color-scheme dark)
-    background-image linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), bgurl
+    background-image linear-gradient(translucent, translucent), bg-url
 
 .bio
   position absolute
@@ -53,7 +54,7 @@ button
   right 0
   bottom 0
   left 0
-  background-color biobg
+  background-color bg-color
   transition opacity timing-2, visibility timing-2
   padding gap-3
 
@@ -62,7 +63,7 @@ button
     padding-right 25vw
 
   @media (prefers-color-scheme dark)
-    background-color invert(biobg)
+    background-color invert(bg-color)
     color invert(text)
 
   &.hidden
@@ -72,19 +73,19 @@ button
   a:hover
     text-decoration none
     background-color link
-    color biobg
+    color bg-color
 
     @media (prefers-color-scheme dark)
       background-color invert(link)
-      color invert(biobg)
+      color invert(bg-color)
 
   h2
-    color h2color
+    color h2-color
     font-size font-1
     margin-bottom gap-1
 
     @media (prefers-color-scheme dark)
-      color invert(h2color)
+      color invert(h2-color)
 
     &:not(:first-of-type)
       margin-top gap-1
@@ -166,15 +167,15 @@ button
     border-radius 100%
 
 .name
-  color namecolor
-  font-family Gaegu, cursive
+  color name-color
+  font-family name-font
   font-size font-2
 
   @media screen and (min-width breakpoint)
     font-size font-3
 
   @media (prefers-color-scheme dark)
-    color invert(namecolor)
+    color invert(name-color)
 
 .links a
   text-decoration none
