@@ -2,7 +2,7 @@
   var username = 'kidonng'
   var name = 'Kid'
   var description = "Hi, this is Kid. I'm a web developer at NCUHOME. / 你好，我是 Kid。我是南昌大学家园工作室的一名网页开发者。"
-  var avatar = 'https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=100'
+  var avatar = (size) => `https://gravatar.loli.net/avatar/131ee6195713dfb178c5f0582e85a0c1?s=${size}`
   var background = 'https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp'
   var backgroundAlt = 'Akaza Akari standing under cherry blossom trees / 赤座灯里站在樱花树下'
   var favicon = 'https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/favicon.png'
@@ -54,7 +54,7 @@ html(lang="en")
   body
     .profile
       button.avatar(title="About / 关于")
-        img(src=avatar alt="Avatar / 头像")
+        img(src=avatar(100) srcset=`${avatar(200)} 2x` alt="Avatar / 头像")
       div
         h1.name kidonng
         .links
