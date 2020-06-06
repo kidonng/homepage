@@ -6,9 +6,11 @@
   var background = 'https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp'
   var backgroundAlt = 'Akaza Akari standing under cherry blossom trees / 赤座灯里站在樱花树下'
   var favicon = 'https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/favicon.png'
-  var notion = 'https://www.notion.so/8934295471644607ae5f5a832682dba5'
-  var channel = 'https://t.me/s/kidaydream'
-  var github = 'https://github.com/kidonng'
+  var links = {
+    Notion: 'https://www.notion.so/8934295471644607ae5f5a832682dba5',
+    Channel: 'https://t.me/s/kidaydream',
+    GitHub: 'https://github.com/kidonng',
+  }
   var ncuhome = 'https://team.ncuos.com/'
   var wikipedia = 'https://zh.wikipedia.org/wiki/User:Kidonng'
   var moegirlpedia = 'https://zh.moegirl.org/User:Kidonng'
@@ -56,11 +58,10 @@ html(lang="en")
       button.avatar(title="About / 关于")
         img(src=avatar(100) srcset=`${avatar(200)} 2x` alt="Avatar / 头像")
       div
-        h1.name kidonng
+        h1.name= username
         .links
-          a(href=notion) Notion
-          a(href=channel) Channel
-          a(href=github) GitHub
+          each link, name in links
+            a(href=link)= name
     .about.hidden
       button.icon.language(title="Switch language / 切换语言")
         svg(viewbox="0 0 20 20")
