@@ -45,4 +45,4 @@ document.addEventListener('keydown', (e) => {
     toggleAbout({ x: 0, y: 0 })
 })
 
-email.forEach((el) => (el.href = atob('bWFpbHRvOmtpZG9ubmdAZ21haWwuY29t')))
+email.forEach((el) => (el.href = `mailto:${atob('aGlAeHVhbm4ud2FuZw==')}`))
