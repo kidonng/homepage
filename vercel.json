@@ -10,5 +10,15 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/notion",
+      "destination": "https://www.notion.so/8934295471644607ae5f5a832682dba5"
+    },
+    {
+      "source": "/donate",
+      "destination": "https://www.notion.so/02952e9d12f7465fbe78e861eb510149"
+    }
   ]
 }
