@@ -3702,7 +3702,7 @@ parcel-plugin-inliner@1.0.14:
   dependencies:
     "@shferreira/posthtml-inline-assets" "^3.0.0"
 
-parcel-plugin-static-files-copy@^2.3.1:
+parcel-plugin-static-files-copy@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/parcel-plugin-static-files-copy/-/parcel-plugin-static-files-copy-2.3.1.tgz#db7d1ffbc70f25a02091c5f5c29bfb36cbb4c74a"
   integrity sha512-yqB1bhSK+hbfxSjc1y/gBc+Fm6bedNrofx75wgnI0sP+6oEBqjyN51tlJVLu6pZhBLi11ZFwAM2XubCUh2G0+A==
