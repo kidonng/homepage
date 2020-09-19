@@ -1,9 +1,19 @@
-# [`xuann.wang`](https://xuann.wang/)
+# 🏠 `xuann.wang`
 
-This is [@kidonng](https://github.com/kidonng)'s homepage, a roughly crafted single page.
+[@kidonng](https://github.com/kidonng)'s homepage, a roughly made single page.
 
-**Notes**: The tags are for CDN. The website doesn't have a fixed release.
+**Note**: The tags are for jsDelivr.
+
+## Sources
+
+- [Avatar](https://www.pixiv.net/artworks/76373873)
+- [Background image](https://trace.moe/?mute&url=https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp)
+- [Favicon](https://www.pixiv.net/artworks/22779959)
 
 ## I'm Feeling Lucky
 
-Try `dig hi.xuann.wang TXT +short` or `nslookup -type=TXT hi.xuann.wang`.
+```sh
+dig hi.xuann.wang TXT +short
+# or
+nslookup -type=TXT hi.xuann.wang
+```
