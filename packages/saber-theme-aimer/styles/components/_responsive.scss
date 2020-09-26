@@ -1,0 +1,78 @@
+/* >= 480px */
+@media (min-width: $watch) {
+  // 16px (100%)
+  html {
+    font-size: $font-size-base-m;
+  }
+
+  .site-wrapper {
+    padding: $gap-l $gap-l 0;
+  }
+
+  .site-header .columns {
+    padding: 0 $gap-l;
+  }
+
+  .page-content {
+    // Floating figure images
+    figure {
+      &.left,
+      &.right {
+        max-width: 40%;
+      }
+      &.left {
+        float: left;
+        margin-right: $gap-l;
+      }
+      &.right {
+        float: right;
+        margin-left: $gap-l;
+      }
+    }
+
+    // Show header anchor
+    h1, h2, h3, h4, h5, h6 {
+      &:hover .header-anchor {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+/* >= 768px */
+@media (min-width: $tablet - 1) {
+  // 18px (112.5%)
+  html {
+    font-size: $font-size-base-l;
+  }
+
+  .post-list .post-card-wrap.column {
+    padding: $gap-m;
+  }
+}
+
+/* >= 1088px */
+@media (min-width: $desktop) {
+  // 20px (125%)
+  html {
+    font-size: $font-size-base-xl;
+  }
+
+  // Overside figure images
+  .page-content {
+    figure {
+      &.left,
+      &.right {
+        max-width: 50%;
+      }
+
+      &.left {
+        margin-left: -25%;
+      }
+
+      &.right {
+        margin-right: -25%;
+      }
+    }
+  }
+}

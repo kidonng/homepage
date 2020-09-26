@@ -1,0 +1,81 @@
+/** Biaodian **/
+@font-face {
+  font-family: 'Biaodian';
+  font-display: swap;
+  src: local("Source Han Sans SC"), local("Noto Sans CJK SC"), local("Songti SC"), local(SimSun);
+  unicode-range: U+00B7, U+2014, U+2026, U+300C-300F, U+300A-300B, U+3008-3009, U+3014-3015, U+FF08-FF09, U+FF1B, U+FF1A, U+FF1F, U+FF01;
+}
+
+/** Serif: Manuale **/
+@font-face {
+  font-family: 'Manuale';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Manuale Regular'), local('Manuale-Regular'), url(https://fonts.gstatic.com/s/manuale/v3/f0X20eas_8Z-TFZdNPHOwg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Manuale';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Manuale Italic'), local('Manuale-Italic'), url(https://fonts.gstatic.com/s/manuale/v3/f0X00eas_8Z-TFZdNPT-wOHC.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Manuale';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Manuale SemiBold'), local('Manuale-SemiBold'), url(https://fonts.gstatic.com/s/manuale/v3/f0Xz0eas_8Z-TFZdPC7q18bn9A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Manuale';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Manuale SemiBold Italic'), local('Manuale-SemiBoldItalic'), url(https://fonts.gstatic.com/s/manuale/v3/f0Xx0eas_8Z-TFZdNPT2H8XX9ocC.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/** Sans-Serif: Open Sans **/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v16/mem6YaGs126MiZpBA-UFUK0Zdc0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'), url(https://fonts.gstatic.com/s/opensans/v16/memnYaGs126MiZpBA-UFUKXGUdhrIqM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
