@@ -6,7 +6,7 @@
 
 ## Sources
 
-- [Avatar](https://www.pixiv.net/artworks/76373873)
+- [Avatar](https://www.pixiv.net/artworks/83899911)
 - [Background image](https://trace.moe/?mute&url=https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp)
 - [Favicon](https://www.pixiv.net/artworks/22779959)
 
