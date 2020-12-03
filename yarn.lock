@@ -1297,10 +1297,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/google.analytics@npm:^0.0.40":
-  version: 0.0.40
-  resolution: "@types/google.analytics@npm:0.0.40"
-  checksum: ac934ad143fc6dd568c8bc3f8103001b661a1fbff0870d1104fecba039e93a1f384cd88a5181ad3e6c467fa42c401911af36f78e95f7e50c7c0f47f8489110f5
+"@types/google.analytics@npm:^0.0.41":
+  version: 0.0.41
+  resolution: "@types/google.analytics@npm:0.0.41"
+  checksum: db530fa6b174b0b0a4a10e7499257c7aae60df3e27e68eccc1a342d5b08b000fd249d69a3cd5039d326137c76f071863b496fbf6b8b9549b412355f3aac77cdf
   languageName: node
   linkType: hard
 
@@ -7169,7 +7169,7 @@ typescript@^4.0.3:
   version: 0.0.0-use.local
   resolution: "xuann.wang@workspace:."
   dependencies:
-    "@types/google.analytics": ^0.0.40
+    "@types/google.analytics": ^0.0.41
     ga-lite: ^2.1.0
     minireset.css: ^0.0.6
     parcel: ^1.12.4

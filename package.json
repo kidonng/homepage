@@ -10,7 +10,7 @@
     "minireset.css": "^0.0.6"
   },
   "devDependencies": {
-    "@types/google.analytics": "^0.0.40",
+    "@types/google.analytics": "^0.0.41",
     "parcel": "^1.12.4",
     "parcel-plugin-inliner": "^1.0.14",
     "parcel-plugin-static-files-copy": "^2.5.0",
