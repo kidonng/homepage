@@ -3,12 +3,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link rel="preconnect" href="https://gravatar.loli.net/" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
-    <link rel="dns-prefetch" href="https://gravatar.loli.net/" />
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" />
     <title>kidonng</title>
     <meta name="description" content="@kidonng's homepage" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +14,7 @@
     <meta property="og:url" content="https://xuann.wang/" />
     <meta
       property="og:image"
-      content="https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp"
+      content="https://cdn.jsdelivr.net/gh/kidonng/xuann.wang@0.0.4/static/bg.webp"
     />
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:width" content="1920" />
@@ -37,21 +31,26 @@
     <link
       rel="icon"
       type="image/png"
-      href="https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/favicon.png"
+      href="https://cdn.jsdelivr.net/gh/kidonng/xuann.wang@0.0.4/static/favicon.png"
     />
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <div class="profile">
       <img
         class="avatar"
         src="https://sdn.geekzu.org/avatar/131ee6195713dfb178c5f0582e85a0c1?s=100"
-        srcset="https://sdn.geekzu.org/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200 2x"
+        srcset="
+          https://sdn.geekzu.org/avatar/131ee6195713dfb178c5f0582e85a0c1?s=200 2x
+        "
         alt="Avatar"
       />
       <div>
         <h1 class="name">kidonng</h1>
         <div class="links">
-          <a href="https://www.notion.so/8934295471644607ae5f5a832682dba5">Home</a>
+          <a href="https://www.notion.so/8934295471644607ae5f5a832682dba5"
+            >Home</a
+          >
           <a href="https://t.me/s/kichann">Channel</a>
           <a href="https://github.com/kidonng">Code</a>
           <a href="https://t.me/kidonng">Chat</a>
@@ -60,7 +59,11 @@
         </div>
       </div>
     </div>
-    <script src="./script.ts"></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b28b9af42f134af08394483b18478767"}'></script><!-- End Cloudflare Web Analytics -->
+    <script type="module" src="./src/script.ts"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "b28b9af42f134af08394483b18478767"}'
+    ></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+@import 'minireset.css';
+
 @font-face {
   font-family: 'B612 Mono';
   font-style: normal;
@@ -36,7 +38,7 @@ body {
       rgba(255, 255, 255, 0.4),
       rgba(255, 255, 255, 0.4)
     ),
-    url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp');
+    url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang@0.0.4/static/bg.webp');
   background-size: cover;
 }
 
@@ -49,7 +51,7 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp');
+      url('https://cdn.jsdelivr.net/gh/kidonng/xuann.wang@0.0.4/static/bg.webp');
   }
 }
 

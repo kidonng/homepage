@@ -7,7 +7,7 @@
 ## Sources
 
 - [Avatar](https://Twitter.com/_namori_/status/1318789046953373696)
-- [Background image](https://trace.moe/?mute&url=https://cdn.jsdelivr.net/gh/kidonng/xuann.wang/static/bg.webp)
+- [Background image](https://trace.moe/?mute&url=https://cdn.jsdelivr.net/gh/kidonng/xuann.wang@0.0.4/static/bg.webp)
 - [Favicon](https://www.pixiv.net/artworks/22779959)
 
 ## I'm Feeling Lucky

@@ -2,8 +2,9 @@
   "name": "xuann.wang",
   "private": true,
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
     "ga-lite": "^2.1.0",
@@ -11,11 +12,9 @@
   },
   "devDependencies": {
     "@types/google.analytics": "^0.0.41",
-    "parcel": "^1.12.4",
-    "parcel-plugin-inliner": "^1.0.14",
-    "parcel-plugin-static-files-copy": "^2.5.0",
     "prettier": "^2.1.2",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "vite": "^2.0.0-beta.65"
   },
   "prettier": {
     "semi": false,
