@@ -1,5 +1,13 @@
-.cache
 dist
 node_modules
 
 .vercel
+
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
