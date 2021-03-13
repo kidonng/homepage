@@ -19,5 +19,8 @@
       "source": "/donate",
       "destination": "https://www.notion.so/02952e9d12f7465fbe78e861eb510149"
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
