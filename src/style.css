@@ -28,7 +28,7 @@
 }
 
 body {
-  color: #4a4a4a;
+  color: white;
   font-family: 'B612 Mono', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
     'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN',
     'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, monospace;
@@ -65,18 +65,26 @@ a {
   }
 }
 
+.profile,
+noscript div {
+  margin: 1.5em;
+}
+
 .profile {
   position: fixed;
   bottom: 0;
   user-select: none;
   -moz-user-select: none;
-  margin: 1.5em;
 }
 
 @media screen and (min-width: 600px) {
+  .profile,
+  noscript div {
+    margin: 2em;
+  }
+
   .profile {
     display: flex;
-    margin: 2em;
   }
 }
 
