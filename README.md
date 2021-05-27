@@ -6,7 +6,7 @@
 
 ## Sources
 
-- [Avatar](https://www.pixiv.net/artworks/82620455)
+- [Avatar](https://twitter.com/_namori_/status/1393491431956746240)
 - [Background image](https://trace.moe/?mute&url=https://cdn.jsdelivr.net/gh/kidonng/xuann.wang@0.0.4/static/bg.webp)
 - [Favicon](https://www.pixiv.net/artworks/22779959)
 
